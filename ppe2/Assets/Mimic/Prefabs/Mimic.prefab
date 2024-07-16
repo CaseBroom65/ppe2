@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8675915457954794082}
   - component: {fileID: 8675915457954794083}
   - component: {fileID: 608258904}
+  - component: {fileID: 828814015032307482}
   m_Layer: 0
   m_Name: Mimic
   m_TagString: Untagged
@@ -51,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   legPrefab: {fileID: 1682633662898237459, guid: fb7bce2dee9494540a1866bb5d230a51, type: 3}
+  maxHealth: 100
   numberOfLegs: 5
   partsPerLeg: 4
   legCount: 0
@@ -68,7 +70,7 @@ MonoBehaviour:
   maxGrowCoef: 6.5
   newLegCooldown: 0.3
   attackRange: 2
-  velocity: {x: -0.7524138, y: 0, z: -0.1756593}
+  velocity: {x: 0.6942336, y: 0, z: 0.48395324}
 --- !u!114 &608258904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +90,28 @@ MonoBehaviour:
   detectionRange: 10
   attackRange: 2
   attackCooldown: 1
+--- !u!195 &828814015032307482
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8675915457954794080}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &8675915458194695971
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,6 +123,7 @@ GameObject:
   - component: {fileID: 8675915458194695970}
   - component: {fileID: 8675915458194695975}
   - component: {fileID: 8675915458194695972}
+  - component: {fileID: 8058372116100932565}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -173,3 +198,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &8058372116100932565
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8675915458194695971}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
